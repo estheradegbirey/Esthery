@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Esther Oseyemi Adegbire | Customer Support Agent</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --w:#ffffff;
+  --g0:#F6F9FF;
+  --g1:#EEF4FF;
+  --g2:#DBEAFE;
+  --b3:#93C5FD;
+  --b4:#3B82F6;
+  --b5:#2563EB;
+  --b6:#1D4ED8;
+  --b7:#1E40AF;
+  --navy:#0C1F4A;
+  --s1:#F1F5F9;
+  --s2:#E2E8F0;
+  --s3:#CBD5E1;
+  --s4:#94A3B8;
+  --s5:#64748B;
+  --s6:#475569;
+  --s7:#334155;
+  --s9:#0F172A;
+  --gr:#10B981;
+  --r: 0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(15,30,80,.07);
+  --r2:0 2px 8px rgba(0,0,0,.05),0 8px 32px rgba(15,30,80,.1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--w);color:var(--s7);line-height:1.6;font-size:16px}
+
+/* ─── TOPBAR ─── */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(255,255,255,.97);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--s2);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 5.5%;height:62px;
+}
+.tb-brand{display:flex;align-items:center;gap:.75rem}
+.tb-mark{
+  width:34px;height:34px;border-radius:7px;
+  background:linear-gradient(135deg,var(--b5),var(--b7));
+  display:flex;align-items:center;justify-content:center;
+  font-size:.68rem;font-weight:800;color:#fff;letter-spacing:.04em;
+}
+.tb-name{font-size:.875rem;font-weight:700;color:var(--s9)}
+.tb-nav{display:flex;gap:.15rem;list-style:none}
+.tb-nav a{
+  text-decoration:none;font-size:.8rem;font-weight:500;color:var(--s6);
+  padding:.38rem .8rem;border-radius:6px;transition:all .15s;
+}
+.tb-nav a:hover{background:var(--g1);color:var(--b5)}
+.tb-cta{
+  background:var(--b5);color:#fff;text-decoration:none;
+  font-size:.8rem;font-weight:600;padding:.45rem 1.1rem;
+  border-radius:7px;transition:all .2s;
+}
+.tb-cta:hover{background:var(--b6);box-shadow:0 3px 12px rgba(37,99,235,.35);transform:translateY(-1px)}
+
+/* ─── HERO ─── */
+.hero-section{
+  background:linear-gradient(160deg,var(--g0) 0%,var(--w) 60%);
+  padding:100px 5.5% 72px;
+}
+.hero-inner{
+  max-width:1140px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 420px;gap:4.5rem;align-items:center;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--g1);border:1px solid var(--g2);
+  color:var(--b5);font-size:.7rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.28rem .8rem;border-radius:100px;margin-bottom:1.3rem;
+}
+.hero-kicker i{width:7px;height:7px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{
+  font-family:'Merriweather',serif;
+  font-size:clamp(2rem,3.2vw,2.9rem);
+  color:var(--s9);line-height:1.18;letter-spacing:-.025em;
+  margin-bottom:.9rem;
+}
+.hero h1 em{font-style:italic;color:var(--b5)}
+.role-tag{
+  display:inline-block;
+  font-size:.82rem;font-weight:500;color:var(--s6);
+  background:var(--s1);border-left:3px solid var(--b4);
+  padding:.45rem 1rem;border-radius:0 6px 6px 0;
+  margin-bottom:1.3rem;line-height:1.5;
+}
+.hero-bio{font-size:.975rem;color:var(--s5);line-height:1.85;margin-bottom:2rem;max-width:500px}
+.hero-btns{display:flex;gap:.875rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-solid{
+  background:var(--b5);color:#fff;text-decoration:none;
+  font-size:.85rem;font-weight:600;padding:.75rem 1.6rem;
+  border-radius:8px;transition:all .2s;display:inline-flex;align-items:center;gap:.4rem;
+}
+.btn-solid:hover{background:var(--b6);transform:translateY(-1px);box-shadow:0 4px 18px rgba(37,99,235,.32)}
+.btn-ghost{
+  background:transparent;color:var(--b5);text-decoration:none;
+  font-size:.85rem;font-weight:600;padding:.75rem 1.6rem;
+  border-radius:8px;border:1.5px solid var(--b3);transition:all .2s;
+  display:inline-flex;align-items:center;gap:.4rem;
+}
+.btn-ghost:hover{background:var(--g1);border-color:var(--b4)}
+.hero-contacts{display:flex;flex-direction:column;gap:.5rem}
+.hci{
+  display:flex;align-items:center;gap:.6rem;
+  font-size:.82rem;font-weight:500;color:var(--s5);
+  text-decoration:none;transition:color .15s;
+}
+.hci:hover{color:var(--b5)}
+.hci-ico{
+  width:26px;height:26px;background:var(--g1);
+  border-radius:5px;display:flex;align-items:center;
+  justify-content:center;font-size:.75rem;flex-shrink:0;
+}
+
+/* profile card */
+.pcard{
+  background:var(--w);border:1px solid var(--s2);
+  border-radius:20px;overflow:hidden;box-shadow:var(--r2);
+}
+.pcard-top{
+  background:linear-gradient(140deg,var(--navy) 0%,var(--b5) 100%);
+  padding:2rem;text-align:center;position:relative;
+}
+.pcard-top::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;height:24px;
+  background:var(--w);clip-path:ellipse(55% 100% at 50% 100%);
+}
+.pavatar{
+  width:84px;height:84px;border-radius:50%;
+  background:rgba(255,255,255,.18);border:3px solid rgba(255,255,255,.35);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Merriweather',serif;font-size:1.9rem;color:#fff;
+  margin:0 auto 1rem;
+}
+.pname{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:.2rem}
+.ptitle{font-size:.7rem;color:rgba(255,255,255,.72);line-height:1.5}
+.avail{
+  display:inline-flex;align-items:center;gap:5px;margin-top:.7rem;
+  background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);
+  color:#6EE7B7;font-size:.65rem;font-weight:700;
+  padding:.22rem .6rem;border-radius:100px;
+}
+.avail-dot{width:6px;height:6px;background:var(--gr);border-radius:50%;animation:pulse 2s infinite}
+.pcard-body{padding:1.4rem}
+.pstats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.1rem}
+.pstat{
+  text-align:center;background:var(--g0);
+  border:1px solid var(--s2);border-radius:9px;padding:.65rem .4rem;
+}
+.pstat-n{font-family:'Merriweather',serif;font-size:1.3rem;color:var(--s9);line-height:1}
+.pstat-l{font-size:.6rem;color:var(--s4);margin-top:.15rem;font-weight:500}
+.pbadges{display:flex;flex-wrap:wrap;gap:.35rem}
+.pbadge{
+  font-size:.64rem;font-weight:600;color:var(--b5);
+  background:var(--g1);border:1px solid var(--g2);
+  padding:.18rem .5rem;border-radius:4px;
+}
+
+/* ─── STRIP ─── */
+.strip{background:var(--navy);padding:15px 5.5%}
+.strip-in{
+  max-width:1140px;margin:0 auto;
+  display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+}
+.strip-lbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);white-space:nowrap}
+.strip-tools{display:flex;gap:1.75rem;flex-wrap:wrap}
+.strip-t{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.6)}
+
+/* ─── SECTION ATOMS ─── */
+.sec{padding:76px 5.5%;max-width:1140px;margin:0 auto}
+.sec-alt{background:var(--g0);padding:76px 5.5%}
+.sec-alt-in{max-width:1140px;margin:0 auto}
+.eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--b5);margin-bottom:.45rem}
+.sec-title{font-family:'Merriweather',serif;font-size:clamp(1.55rem,2.4vw,2.1rem);color:var(--s9);letter-spacing:-.022em;line-height:1.25;margin-bottom:.7rem}
+.sec-sub{font-size:.9rem;color:var(--s5);line-height:1.8;max-width:520px;margin-bottom:2.6rem}
+.hdivider{height:1px;background:var(--s2);max-width:1140px;margin:0 auto}
+
+/* ─── SERVICES ─── */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:.9rem}
+.svc{
+  background:var(--w);border:1px solid var(--s2);border-radius:13px;
+  padding:1.6rem;transition:all .2s;position:relative;overflow:hidden;
+}
+.svc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--b5),var(--b3));
+  transform:scaleX(0);transform-origin:left;transition:transform .25s;
+}
+.svc:hover{box-shadow:var(--r2);transform:translateY(-2px);border-color:var(--g2)}
+.svc:hover::before{transform:scaleX(1)}
+.svc-ico{width:42px;height:42px;background:var(--g1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:.9rem}
+.svc h3{font-size:.9rem;font-weight:700;color:var(--s9);margin-bottom:.45rem}
+.svc p{font-size:.8rem;color:var(--s5);line-height:1.72;margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.3rem}
+.tag{font-size:.63rem;font-weight:600;color:var(--b5);background:var(--g1);padding:.17rem .48rem;border-radius:4px}
+
+/* ─── SKILLS ─── */
+.sk-layout{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+.sk-g-lbl{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--s4);margin-bottom:1.1rem}
+.sk-item{margin-bottom:.95rem}
+.sk-row{display:flex;justify-content:space-between;font-size:.8rem;font-weight:500;color:var(--s7);margin-bottom:.35rem}
+.sk-pct{font-weight:700;color:var(--b5)}
+.sk-bar{height:5px;background:var(--s2);border-radius:100px;overflow:hidden}
+.sk-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--b5),var(--b3))}
+.tc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem}
+.tc{
+  background:var(--w);border:1px solid var(--s2);border-radius:7px;
+  padding:.5rem .55rem;font-size:.72rem;font-weight:500;color:var(--s6);
+  text-align:center;transition:all .15s;
+}
+.tc:hover{border-color:var(--b4);color:var(--b5);background:var(--g1)}
+
+/* ─── PROJECT ─── */
+.proj-wrap{
+  background:var(--w);border:1px solid var(--s2);
+  border-radius:18px;overflow:hidden;box-shadow:var(--r2);
+}
+.proj-top{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--b5) 100%);
+  padding:2.1rem 2.4rem;display:flex;align-items:center;gap:1.4rem;
+}
+.proj-ico{
+  width:60px;height:60px;background:rgba(255,255,255,.15);
+  border-radius:13px;display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;flex-shrink:0;
+}
+.proj-top h3{font-family:'Merriweather',serif;font-size:1.2rem;color:#fff;margin-bottom:.25rem}
+.proj-top p{font-size:.76rem;color:rgba(255,255,255,.7)}
+.proj-body{padding:2rem 2.4rem}
+.proj-lead{
+  font-size:.88rem;color:var(--s6);line-height:1.85;
+  border-left:3px solid var(--b4);padding-left:1rem;margin-bottom:1.9rem;
+}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;margin-bottom:1.9rem}
+.feat{
+  background:var(--g0);border:1px solid var(--s2);border-radius:10px;
+  padding:.9rem 1rem;display:flex;align-items:flex-start;gap:.7rem;
+}
+.feat-i{
+  width:30px;height:30px;background:var(--g1);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;flex-shrink:0;margin-top:1px;
+}
+.feat-t strong{display:block;font-size:.77rem;font-weight:600;color:var(--s9);margin-bottom:.12rem}
+.feat-t span{font-size:.72rem;color:var(--s5);line-height:1.5}
+.skill-chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.sc{
+  font-size:.69rem;font-weight:600;color:var(--b6);
+  background:var(--g1);border:1px solid var(--g2);
+  padding:.22rem .6rem;border-radius:5px;
+}
+
+/* ─── EXPERIENCE ─── */
+.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.exp{
+  background:var(--w);border:1px solid var(--s2);border-radius:13px;
+  padding:1.5rem;transition:box-shadow .2s;
+}
+.exp:hover{box-shadow:var(--r2)}
+.exp-date{
+  display:inline-block;font-size:.67rem;font-weight:600;letter-spacing:.05em;
+  color:var(--b5);background:var(--g1);padding:.18rem .55rem;border-radius:4px;margin-bottom:.7rem;
+}
+.exp h4{font-size:.875rem;font-weight:700;color:var(--s9);margin-bottom:.18rem}
+.exp .co{font-size:.76rem;color:var(--s4);font-weight:500;margin-bottom:.75rem}
+.exp p{font-size:.78rem;color:var(--s6);line-height:1.72}
+
+/* ─── WHY ─── */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.why{
+  text-align:center;padding:1.9rem 1.25rem;
+  border-radius:13px;border:1px solid var(--s2);background:var(--w);transition:all .2s;
+}
+.why:hover{box-shadow:var(--r2);border-color:var(--g2)}
+.why-n{font-family:'Merriweather',serif;font-size:2.4rem;color:var(--b5);line-height:1;margin-bottom:.45rem}
+.why h4{font-size:.82rem;font-weight:700;color:var(--s9);margin-bottom:.35rem}
+.why p{font-size:.75rem;color:var(--s5);line-height:1.6}
+
+/* ─── CONTACT ─── */
+.ct-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:start}
+.ct-left h2{font-family:'Merriweather',serif;font-size:1.9rem;color:var(--s9);letter-spacing:-.02em;line-height:1.25;margin-bottom:.75rem}
+.ct-left p{font-size:.88rem;color:var(--s5);line-height:1.82;margin-bottom:1.9rem}
+.ct-items{display:flex;flex-direction:column;gap:.75rem}
+.ci{
+  display:flex;align-items:center;gap:.875rem;
+  text-decoration:none;font-size:.85rem;font-weight:500;color:var(--s7);
+  padding:.875rem 1rem;border:1px solid var(--s2);
+  border-radius:10px;background:var(--w);transition:all .15s;
+}
+.ci:hover{border-color:var(--b3);color:var(--b5);background:var(--g1)}
+.ci-ico{width:36px;height:36px;background:var(--g1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.ci-d strong{display:block;font-size:.65rem;color:var(--s4);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.1rem}
+.cf{background:var(--g0);border:1px solid var(--s2);border-radius:16px;padding:2.1rem}
+.cf-ttl{font-weight:700;font-size:.95rem;color:var(--s9);margin-bottom:1.4rem}
+.cf-r{margin-bottom:1rem}
+.cf-r label{display:block;font-size:.72rem;font-weight:600;color:var(--s6);margin-bottom:.32rem;letter-spacing:.02em}
+.cf-r input,.cf-r textarea,.cf-r select{
+  width:100%;padding:.68rem .875rem;border:1.5px solid var(--s2);
+  border-radius:7px;font-family:'Inter',sans-serif;font-size:.85rem;
+  color:var(--s9);background:var(--w);transition:border-color .15s;outline:none;
+}
+.cf-r input:focus,.cf-r textarea:focus,.cf-r select:focus{border-color:var(--b4)}
+.cf-r textarea{resize:vertical;min-height:96px}
+.cf-2{display:grid;grid-template-columns:1fr 1fr;gap:.875rem}
+
+/* ─── FOOTER ─── */
+.ft{padding:2rem 5.5%;max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-l{font-size:.77rem;color:var(--s4)}
+.ft-l strong{color:var(--s7);font-weight:600;display:block;margin-bottom:.12rem}
+.ft-soc{display:flex;gap:.45rem}
+.fsoc{
+  width:32px;height:32px;border:1px solid var(--s2);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:.8rem;color:var(--s5);transition:all .15s;
+}
+.fsoc:hover{border-color:var(--b4);color:var(--b5);background:var(--g1)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .pcard{max-width:380px}
+  .sk-layout{grid-template-columns:1fr;gap:2.5rem}
+  .ct-grid{grid-template-columns:1fr;gap:2.5rem}
+  .exp-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .cf-2{grid-template-columns:1fr}
+  .tb-nav li:not(:last-child){display:none}
+  .proj-top{flex-direction:column;text-align:center}
+  .proj-body{padding:1.5rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <div class="tb-brand">
+    <div class="tb-mark">EOA</div>
+    <span class="tb-name">Esther Adegbire</span>
+  </div>
+  <ul class="tb-nav">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="tb-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero-section">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-kicker"><i></i>Open to Remote Work &nbsp;·&nbsp; Worldwide</div>
+      <h1>Esther Oseyemi<br><em>Adegbire</em></h1>
+      <div class="role-tag">Customer Support Agent &nbsp;|&nbsp; Live Chat, Email &amp; CRM Support &nbsp;|&nbsp; Zendesk / Freshdesk</div>
+      <p class="hero-bio">I help businesses deliver fast, empathetic, and well-organised customer experiences. From live chat and email queues to CRM workflows and ticket escalation — I bring clarity, reliability, and warmth to every customer interaction.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-solid">Hire Me &#8594;</a>
+        <a href="#project" class="btn-ghost">View My Project</a>
+      </div>
+      <div class="hero-contacts">
+        <a href="mailto:estheradegbire@gmail.com" class="hci"><span class="hci-ico">✉️</span>estheradegbire@gmail.com</a>
+        <a href="https://wa.me/2348028167708" class="hci" target="_blank"><span class="hci-ico">💬</span>+234 802 816 7708 &nbsp;(WhatsApp)</a>
+        <a href="https://www.linkedin.com/in/adegbire-esther" class="hci" target="_blank"><span class="hci-ico">💼</span>linkedin.com/in/adegbire-esther</a>
+      </div>
+    </div>
+    <div>
+      <div class="pcard">
+        <div class="pcard-top">
+          <div class="pavatar">EA</div>
+          <div class="pname">Esther Oseyemi Adegbire</div>
+          <div class="ptitle">Customer Support Agent<br>Live Chat · Email · CRM · Ticket Management</div>
+          <div class="avail"><span class="avail-dot"></span>&nbsp;Available for Remote Roles</div>
+        </div>
+        <div class="pcard-body">
+          <div class="pstats">
+            <div class="pstat"><div class="pstat-n">3+</div><div class="pstat-l">Yrs Exp.</div></div>
+            <div class="pstat"><div class="pstat-n">96%</div><div class="pstat-l">CSAT</div></div>
+            <div class="pstat"><div class="pstat-n">50+</div><div class="pstat-l">Daily Tickets</div></div>
+          </div>
+          <div class="pbadges">
+            <span class="pbadge">Zendesk</span><span class="pbadge">Freshdesk</span>
+            <span class="pbadge">HubSpot CRM</span><span class="pbadge">Trello</span>
+            <span class="pbadge">Live Chat</span><span class="pbadge">Intercom</span>
+            <span class="pbadge">Google Workspace</span><span class="pbadge">Slack</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOOL STRIP -->
+<div class="strip">
+  <div class="strip-in">
+    <span class="strip-lbl">Proficient With</span>
+    <div class="strip-tools">
+      <span class="strip-t">Zendesk</span>
+      <span class="strip-t">Freshdesk</span>
+      <span class="strip-t">HubSpot CRM</span>
+      <span class="strip-t">Trello</span>
+      <span class="strip-t">Intercom</span>
+      <span class="strip-t">Salesforce</span>
+      <span class="strip-t">Notion</span>
+      <span class="strip-t">Slack</span>
+      <span class="strip-t">Google Workspace</span>
+      <span class="strip-t">Loom</span>
+      <span class="strip-t">Help Scout</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="eyebrow">What I Offer</div>
+  <div class="sec-title">Customer Support Services</div>
+  <p class="sec-sub">End-to-end support expertise — from the first customer message to full resolution, handled with professionalism and care.</p>
+  <div class="svc-grid">
+    <div class="svc">
+      <div class="svc-ico">💬</div>
+      <h3>Live Chat Support</h3>
+      <p>Real-time customer assistance across multiple concurrent chat queues. I maintain fast first-response times, empathetic tone, and accurate resolutions — keeping CSAT scores high.</p>
+      <div class="tags"><span class="tag">Intercom</span><span class="tag">Tidio</span><span class="tag">Zendesk Chat</span><span class="tag">LiveChat</span></div>
+    </div>
+    <div class="svc">
+      <div class="svc-ico">📧</div>
+      <h3>Email Support</h3>
+      <p>Managing shared inboxes, triaging incoming requests, and crafting clear and brand-consistent replies. I build canned response libraries to speed up resolution without losing the human touch.</p>
+      <div class="tags"><span class="tag">Gmail</span><span class="tag">Help Scout</span><span class="tag">Freshdesk</span><span class="tag">Templates</span></div>
+    </div>
+    <div class="svc">
+      <div class="svc-ico">🎫</div>
+      <h3>Ticket &amp; Escalation Management</h3>
+      <p>Structuring, prioritising, and resolving support tickets with SLA compliance. I identify escalation triggers early, route issues correctly, and keep customers updated at every step.</p>
+      <div class="tags"><span class="tag">Zendesk</span><span class="tag">Freshdesk</span><span class="tag">Trello</span><span class="tag">SLA Mgmt</span></div>
+    </div>
+    <div class="svc">
+      <div class="svc-ico">🔧</div>
+      <h3>Technical Support</h3>
+      <p>Troubleshooting account access issues, product bugs, onboarding errors, and integration problems. I translate complex technical problems into plain, reassuring customer language.</p>
+      <div class="tags"><span class="tag">Bug Triage</span><span class="tag">Troubleshooting</span><span class="tag">FAQs</span></div>
+    </div>
+    <div class="svc">
+      <div class="svc-ico">💳</div>
+      <h3>Refund &amp; Payment Support</h3>
+      <p>Processing refunds, handling billing disputes, and managing payment-related queries with tact and policy adherence. I liaise with finance and billing teams to ensure accurate, timely resolutions.</p>
+      <div class="tags"><span class="tag">Refund Handling</span><span class="tag">Dispute Mgmt</span><span class="tag">Billing</span></div>
+    </div>
+    <div class="svc">
+      <div class="svc-ico">📊</div>
+      <h3>CRM Workflow Management</h3>
+      <p>Maintaining CRM data integrity, building automation workflows, creating support dashboards, and tracking CSAT, ticket volumes, and resolution times for continuous improvement.</p>
+      <div class="tags"><span class="tag">HubSpot</span><span class="tag">Salesforce</span><span class="tag">Freshdesk CRM</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- SKILLS -->
+<div class="sec-alt" id="skills">
+  <div class="sec-alt-in">
+    <div class="eyebrow">Capabilities</div>
+    <div class="sec-title">Skills &amp; Tools</div>
+    <p class="sec-sub">A well-rounded skill set built for remote, high-volume, and internationally distributed support environments.</p>
+    <div class="sk-layout">
+      <div>
+        <div class="sk-g-lbl">Core Support Competencies</div>
+        <div class="sk-item"><div class="sk-row"><span>Live Chat &amp; Email Support</span><span class="sk-pct">96%</span></div><div class="sk-bar"><div class="sk-fill" style="width:96%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Ticket &amp; Escalation Management</span><span class="sk-pct">94%</span></div><div class="sk-bar"><div class="sk-fill" style="width:94%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>CRM Workflow Management</span><span class="sk-pct">90%</span></div><div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Refund &amp; Payment Support</span><span class="sk-pct">89%</span></div><div class="sk-bar"><div class="sk-fill" style="width:89%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Technical Troubleshooting</span><span class="sk-pct">86%</span></div><div class="sk-bar"><div class="sk-fill" style="width:86%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Knowledge Base &amp; SOP Writing</span><span class="sk-pct">88%</span></div><div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div></div>
+        <br>
+        <div class="sk-g-lbl">Professional &amp; Soft Skills</div>
+        <div class="sk-item"><div class="sk-row"><span>Written Communication</span><span class="sk-pct">97%</span></div><div class="sk-bar"><div class="sk-fill" style="width:97%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Conflict De-escalation</span><span class="sk-pct">93%</span></div><div class="sk-bar"><div class="sk-fill" style="width:93%"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span>Remote Collaboration</span><span class="sk-pct">95%</span></div><div class="sk-bar"><div class="sk-fill" style="width:95%"></div></div></div>
+      </div>
+      <div>
+        <div class="sk-g-lbl" style="margin-bottom:1rem">Tools &amp; Platforms</div>
+        <div class="tc-grid">
+          <div class="tc">Zendesk</div><div class="tc">Freshdesk</div><div class="tc">HubSpot CRM</div>
+          <div class="tc">Trello</div><div class="tc">Intercom</div><div class="tc">Salesforce</div>
+          <div class="tc">Notion</div><div class="tc">Slack</div><div class="tc">Asana</div>
+          <div class="tc">Google Suite</div><div class="tc">Loom</div><div class="tc">Zoom</div>
+          <div class="tc">Help Scout</div><div class="tc">Calendly</div><div class="tc">Tidio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT -->
+<section class="sec" id="project">
+  <div class="eyebrow">Featured Project</div>
+  <div class="sec-title">Portfolio Work</div>
+  <p class="sec-sub">A hands-on simulation demonstrating complete customer support operations — built from scratch to showcase real-world readiness.</p>
+  <div class="proj-wrap">
+    <div class="proj-top">
+      <div class="proj-ico">🎫</div>
+      <div>
+        <h3>Customer Support Ticket Management Workflow</h3>
+        <p>Built with Trello &nbsp;·&nbsp; Simulating End-to-End Support Operations</p>
+      </div>
+    </div>
+    <div class="proj-body">
+      <p class="proj-lead">Designed a complete customer support ticket management system using Trello to simulate the full operations of a real support team. The workflow replicates how modern support departments handle incoming queries, manage escalations, follow up with customers, maintain a living knowledge base, and continuously optimise processes for speed and quality.</p>
+      <div class="feat-grid">
+        <div class="feat"><div class="feat-i">📋</div><div class="feat-t"><strong>Ticket Tracking</strong><span>Structured boards for new, in-progress, on-hold, resolved, and closed tickets with priority labels</span></div></div>
+        <div class="feat"><div class="feat-i">🚨</div><div class="feat-t"><strong>Escalation Management</strong><span>Defined Tier 1 → Tier 2 escalation paths with SLA timers and handoff protocols</span></div></div>
+        <div class="feat"><div class="feat-i">🔄</div><div class="feat-t"><strong>Customer Follow-Ups</strong><span>Automated reminders and checklists to ensure no open ticket goes stale or unresolved</span></div></div>
+        <div class="feat"><div class="feat-i">📚</div><div class="feat-t"><strong>Knowledge Base Organisation</strong><span>Centralised FAQ cards, SOPs, and canned response templates for consistent team-wide use</span></div></div>
+        <div class="feat"><div class="feat-i">⚡</div><div class="feat-t"><strong>Automation (Butler)</strong><span>Rule-based automations for card movement, label assignment, due date alerts, and status updates</span></div></div>
+        <div class="feat"><div class="feat-i">💳</div><div class="feat-t"><strong>Refund &amp; Payment Workflow</strong><span>Dedicated refund request board with multi-step approval process and customer update templates</span></div></div>
+        <div class="feat"><div class="feat-i">💬</div><div class="feat-t"><strong>Live Chat Simulation</strong><span>Pre-written scripts and decision trees for the most common live chat support scenarios</span></div></div>
+        <div class="feat"><div class="feat-i">📊</div><div class="feat-t"><strong>Workflow Optimisation</strong><span>Weekly review process with metrics tracking, bottleneck identification, and improvement logs</span></div></div>
+      </div>
+      <div style="font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--s4);margin-bottom:.85rem">Skills Demonstrated</div>
+      <div class="skill-chips">
+        <span class="sc">Customer Support Operations</span>
+        <span class="sc">Ticket &amp; Task Management</span>
+        <span class="sc">Escalation Handling</span>
+        <span class="sc">Refund &amp; Payment Support</span>
+        <span class="sc">Live Chat Support</span>
+        <span class="sc">Email Support</span>
+        <span class="sc">Technical Support</span>
+        <span class="sc">CRM Workflow Design</span>
+        <span class="sc">Knowledge Base Building</span>
+        <span class="sc">Remote Collaboration</span>
+        <span class="sc">Process Optimisation</span>
+        <span class="sc">Trello Automation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- EXPERIENCE -->
+<div class="sec-alt" id="experience">
+  <div class="sec-alt-in">
+    <div class="eyebrow">Background</div>
+    <div class="sec-title">Experience</div>
+    <p class="sec-sub">A consistent track record in customer-facing roles — with a strong focus on resolution quality, efficiency, and satisfaction.</p>
+    <div class="exp-grid">
+      <div class="exp">
+        <div class="exp-date">2024 – Present</div>
+        <h4>Freelance Customer Support Agent</h4>
+        <div class="co">Remote · Independent Contractor</div>
+        <p>Delivering end-to-end customer support for international e-commerce and SaaS clients. Managing ticketing workflows in Zendesk and Freshdesk, handling live chat queues, and maintaining CRM data. Consistently achieving 96%+ CSAT scores.</p>
+      </div>
+      <div class="exp">
+        <div class="exp-date">2023 – 2024</div>
+        <h4>Customer Support Representative</h4>
+        <div class="co">E-commerce Brand · Remote</div>
+        <p>Resolved 50+ daily tickets across email and live chat. Wrote help centre articles that reduced repeat queries by 30%. Processed customer refunds and managed payment disputes in line with company policy and billing team procedures.</p>
+      </div>
+      <div class="exp">
+        <div class="exp-date">2022 – 2023</div>
+        <h4>CRM &amp; Support Operations Assistant</h4>
+        <div class="co">B2B Services Company · Remote</div>
+        <p>Maintained HubSpot CRM records, produced weekly support performance reports, built canned response libraries, and supported the creation of onboarding documentation for new support hires across the team.</p>
+      </div>
+      <div class="exp">
+        <div class="exp-date">Ongoing</div>
+        <h4>Portfolio Projects &amp; Continuous Learning</h4>
+        <div class="co">Independent · Self-Development</div>
+        <p>Building real-world support system simulations to demonstrate operational readiness. Actively expanding proficiency in new CRM platforms, support tools, and best practices for remote customer support delivery.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY ME -->
+<section class="sec">
+  <div class="eyebrow">Why Choose Me</div>
+  <div class="sec-title">What Sets Me Apart</div>
+  <p class="sec-sub">Not just answers — clarity, empathy, and reliability delivered consistently across every channel and interaction.</p>
+  <div class="why-grid">
+    <div class="why"><div class="why-n">96%</div><h4>CSAT Score</h4><p>Consistently high customer satisfaction across live chat and email support channels</p></div>
+    <div class="why"><div class="why-n">3+</div><h4>Years Experience</h4><p>Remote support delivery across e-commerce, SaaS, and B2B client environments</p></div>
+    <div class="why"><div class="why-n">50+</div><h4>Daily Tickets</h4><p>Proven capacity to handle high-volume queues without compromising quality</p></div>
+    <div class="why"><div class="why-n">10+</div><h4>Tools Mastered</h4><p>Fluent in the industry's leading support, CRM, and collaboration platforms</p></div>
+  </div>
+</section>
+
+<div class="hdivider"></div>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="ct-grid">
+    <div class="ct-left">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's work<br><em style="font-style:italic;color:var(--b5)">together</em></h2>
+      <p>Open to full-time and contract remote customer support roles with international businesses, agencies, and growing startups. Fluent English speaker, flexible across time zones.</p>
+      <div class="ct-items">
+        <a href="mailto:estheradegbire@gmail.com" class="ci">
+          <span class="ci-ico">✉️</span>
+          <div class="ci-d"><strong>Email</strong>estheradegbire@gmail.com</div>
+        </a>
+        <a href="https://wa.me/2348028167708" class="ci" target="_blank">
+          <span class="ci-ico">💬</span>
+          <div class="ci-d"><strong>WhatsApp</strong>+234 802 816 7708</div>
+        </a>
+        <a href="https://www.linkedin.com/in/adegbire-esther" class="ci" target="_blank">
+          <span class="ci-ico">💼</span>
+          <div class="ci-d"><strong>LinkedIn</strong>linkedin.com/in/adegbire-esther</div>
+        </a>
+        <div class="ci" style="cursor:default">
+          <span class="ci-ico">📍</span>
+          <div class="ci-d"><strong>Location</strong>Nigeria · Available Remotely (Worldwide)</div>
+        </div>
+      </div>
+    </div>
+    <div class="cf">
+      <div class="cf-ttl">Send a Message</div>
+      <div class="cf-2">
+        <div class="cf-r"><label>First Name</label><input type="text" placeholder="Jane"></div>
+        <div class="cf-r"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="cf-r"><label>Email Address</label><input type="email" placeholder="jane@company.com"></div>
+      <div class="cf-r">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service…</option>
+          <option>Live Chat Support</option>
+          <option>Email Support</option>
+          <option>Ticket &amp; Escalation Management</option>
+          <option>Technical Support</option>
+          <option>Refund &amp; Payment Support</option>
+          <option>CRM Workflow Management</option>
+          <option>Multiple / Let's Discuss</option>
+        </select>
+      </div>
+      <div class="cf-r"><label>Your Message</label><textarea placeholder="Tell me about your team size, ticket volume, and what you need from a support agent…"></textarea></div>
+      <a href="mailto:estheradegbire@gmail.com" class="btn-solid" style="width:100%;justify-content:center;text-align:center">Send Message &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="hdivider"></div>
+<div class="ft">
+  <div class="ft-l">
+    <strong>Esther Oseyemi Adegbire</strong>
+    Customer Support Agent · Remote Professional · &copy; 2026
+  </div>
+  <div class="ft-soc">
+    <a href="https://www.linkedin.com/in/adegbire-esther" class="fsoc" target="_blank" title="LinkedIn">in</a>
+    <a href="https://wa.me/2348028167708" class="fsoc" target="_blank" title="WhatsApp">💬</a>
+    <a href="mailto:estheradegbire@gmail.com" class="fsoc" title="Email">✉</a>
+  </div>
+</div>
+
+</body>
+</html>
